@@ -25,11 +25,8 @@ if(fp==NULL)
 perror("Error while opening file.\n");
 exit(0);
 }
-//printf("The contents of  file are:\n");
 while((ch=getline(&line, &len, fp)) != -1)
-{
-//printf("%s",line);
- 
+{ 
 //Logic to check type and value for each line 
    reading = strtok(line, s);
    int counter = 0;
@@ -57,10 +54,10 @@ while((ch=getline(&line, &len, fp)) != -1)
             else if(strcmp(currenttype, GPRMC) == 0){
                 switch(counter){
                     case 3:
-                    printf("latitude is %s,", reading);
+                    printf("latitude is %s\n", reading);
                     break;
                     case 1:
-                    printf("longitude is %s\n", reading);
+                    printf("longitude is %s, ", reading);
                     break;
                 }
                 }
@@ -68,10 +65,10 @@ while((ch=getline(&line, &len, fp)) != -1)
             else if(strcmp(currenttype, GPGSV) == 0){
                 switch(counter){
                     case 3:
-                    printf("latitude is %s,", reading);
+                    printf("latitude is %s\n", reading);
                     break;
                     case 1:
-                    printf("longitude is %s\n", reading);
+                    printf("longitude is %s, ", reading);
                     break;
                 }
                 }
@@ -79,10 +76,10 @@ while((ch=getline(&line, &len, fp)) != -1)
             else if(strcmp(currenttype, GPVTG) == 0){
                 switch(counter){
                     case 3:
-                    printf("latitude is %s,", reading);
+                    printf("latitude is %s\n", reading);
                     break;
                     case 1:
-                    printf("longitude is %s\n", reading);
+                    printf("longitude is %s, ", reading);
                     break;
                 }
                 }
@@ -90,10 +87,10 @@ while((ch=getline(&line, &len, fp)) != -1)
             else if(strcmp(currenttype, GPGSA) == 0){
                 switch(counter){
                     case 3:
-                    printf("latitude is %s,", reading);
+                    printf("latitude is %s\n", reading);
                     break;
                     case 1:
-                    printf("longitude is %s\n", reading);
+                    printf("longitude is %s, ", reading);
                     break;
                 }
                 }
