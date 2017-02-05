@@ -9,6 +9,16 @@ char ch;
 FILE *fp;
 char * line  = NULL;
 size_t len = 0;
+const char s[2] = ",";
+char *reading;
+char *currenttype;
+//Type declarations 
+char *GPGGA="$GPGGA";
+char *GPRMC="$GPRMC";
+char *GPGSV="$GPGSV";
+char *GPVTG="$GPVTG";
+char *GPGSA="$GPGSA";
+ 
 printf("enter the name of the file you wish to open");
 fp=fopen("raw_dump.io","r");
 if(fp==NULL)
@@ -17,31 +27,24 @@ perror("Error while opening file.\n");
 exit(0);
 }
 printf("The contents of  file are:\n");
-while( (ch=getline(&line, &len, fp) ) !=-1)
+while((ch=getline(&line, &len, fp)) != -1)
 {
 printf("%s",line);
  
-//logic to check type and value for each line
-const char s[2] = ",";
-char *reading;
-char *currenttype;
-//type declarations 
-char *GPGGA="$GPGGA";
-char *GPRMC="$GPRMC";
-   
-   /* get the first token */
+//Logic to check type and value for each line 
    reading = strtok(line, s);
    int counter = 0;
-   /* walk through other tokens */
    while( reading != NULL ) 
    {           
         int equal;
         if(counter == 0){
+         /* get the first token */
             printf("%s", reading);
              currenttype =reading;
         }else {
-            //type is GPRMC
-            if(strcmp(currenttype, GPRMC) == 0){
+            /* walk through other tokens */
+            //type is GPGGA
+            if(strcmp(currenttype, GPGGA) == 0){
                 switch(counter){
                     case 3: 
                     printf(", Latitude is %s\n", reading);
@@ -51,8 +54,8 @@ char *GPRMC="$GPRMC";
                     break;
                 }
             }
-            //type is GPGGA
-            else if(strcmp(currenttype, GPGGA) == 0){
+            //type is GPRMC
+            else if(strcmp(currenttype, GPRMC) == 0){
                 switch(counter){
                     case 3:
                     printf("latitude is %s,", reading);
@@ -62,6 +65,40 @@ char *GPRMC="$GPRMC";
                     break;
                 }
                 }
+             //type is GPGSV
+            else if(strcmp(currenttype, GPGSV) == 0){
+                switch(counter){
+                    case 3:
+                    printf("latitude is %s,", reading);
+                    break;
+                    case 1:
+                    printf("longitude is %s\n", reading);
+                    break;
+                }
+                }
+                     //type is GPVTG
+            else if(strcmp(currenttype, GPVTG) == 0){
+                switch(counter){
+                    case 3:
+                    printf("latitude is %s,", reading);
+                    break;
+                    case 1:
+                    printf("longitude is %s\n", reading);
+                    break;
+                }
+                }
+                     //type is GPGSA
+            else if(strcmp(currenttype, GPGSA) == 0){
+                switch(counter){
+                    case 3:
+                    printf("latitude is %s,", reading);
+                    break;
+                    case 1:
+                    printf("longitude is %s\n", reading);
+                    break;
+                }
+                }
+         //types of input end
             }
             //else ends
       reading = strtok(NULL, s);
