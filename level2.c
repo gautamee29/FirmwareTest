@@ -18,31 +18,30 @@ char *GPRMC="$GPRMC";
 char *GPGSV="$GPGSV";
 char *GPVTG="$GPVTG";
 char *GPGSA="$GPGSA";
- 
-printf("enter the name of the file you wish to open");
+
 fp=fopen("raw_dump.io","r");
 if(fp==NULL)
 {
 perror("Error while opening file.\n");
 exit(0);
 }
-printf("The contents of  file are:\n");
+//printf("The contents of  file are:\n");
 while((ch=getline(&line, &len, fp)) != -1)
 {
 printf("%s",line);
  
 //Logic to check type and value for each line 
-   reading = strtok(line, s);
+/*   reading = strtok(line, s);
    int counter = 0;
    while( reading != NULL ) 
    {           
         int equal;
         if(counter == 0){
-         /* get the first token */
+         // get the first token 
             printf("%s", reading);
              currenttype =reading;
         }else {
-            /* walk through other tokens */
+            // walk through other tokens 
             //type is GPGGA
             if(strcmp(currenttype, GPGGA) == 0){
                 switch(counter){
@@ -103,6 +102,7 @@ printf("%s",line);
             //else ends
       reading = strtok(NULL, s);
       counter++;
+*/
 }
  //logic to check type and values for each line ends
  
