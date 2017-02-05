@@ -2,6 +2,8 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include <string.h>
+
 main()
 {
 char ch;
@@ -21,17 +23,60 @@ exit(0);
 while( (ch=getline(&line, &len, fp) ) !=-1)
 {
 printf("%s",line);
-reading=strtok(line,',');
-//read the values
-while(reading != NULL)
-{
-printf('%s\n",reading);
-reading=strtok(NULL,s);
+
+ 
+ 
+//logic to check type and value for each line
+const char s[2] = ",";
+char *reading;
+char *currenttype;
+//type declarations 
+char *GPGGA="$GPGGA";
+char *GPRMC="$GPRMC";
+   
+   /* get the first token */
+   reading = strtok(line, s);
+   int counter = 0;
+   /* walk through other tokens */
+   while( reading != NULL ) 
+   {           
+        int equal;
+        if(counter == 0){
+            printf("%s", reading);
+             currenttype =reading;
+        }else {
+            //type is GPRMC
+            if(strcmp(currenttype, GPRMC) == 0){
+                switch(counter){
+                    case 3: 
+                    printf(", Latitude is %s\n", reading);
+                    break;
+                    case 1 :
+                    printf(", Longitude is %s", reading);
+                    break;
+                }
+            }
+            //type is xyz
+            else if(strcmp(currenttype, GPGGA) == 0){
+                switch(counter){
+                    case 3:
+                    printf("latitude is %s,", reading);
+                    break;
+                    case 1:
+                    printf("longitude is %s\n", reading);
+                    break;
+                }
+                
+                }
+            }
+            //else ends
+      reading = strtok(NULL, s);
+      counter++;
 }
-
-
-
-
+   //logic to check type and values for each line ends
+ 
+ 
+ 
 
 fclose(fp);
 }
