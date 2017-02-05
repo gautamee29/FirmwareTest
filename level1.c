@@ -10,10 +10,10 @@ double rad2deg(double rad);
 #define lon1 21.123456
 main()
 { 
-double lat2 , lon2; double value, theta;
-printf("enter  the latitude and longitude  ");
+double lat2, lon2, value, theta;
+printf("Enter the latitude and longitude...");
 scanf("%lf%lf", &lat2, &lon2);
-printf("the latitude  and longitude are lat2= %lf and lon2=%lf\n",lat2, lon2);
+printf("The latitude  and longitude are lat2= %lf and lon2=%lf\n",lat2, lon2);
 //logic to calculate distance between two lat lon values
 theta=lon1-lon2;
 value=sin(deg2rad(lat1))*sin(deg2rad(lat2))+cos(deg2rad(lat1))*cos(deg2rad(lat2))*cos(deg2rad(theta));
@@ -21,7 +21,7 @@ value=acos(value);
 value=rad2deg(value);
 value=value*60*1.1515*1.609344;
 //logic ends
-printf("the distance is %lf kms",value);
+printf("The distance is %lf kms",value);
 return 0;
 }
 
