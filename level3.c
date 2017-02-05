@@ -10,7 +10,7 @@ printf("hello im pseudo controller\n");
   //run a function every 30 seconds
     while(1)
     {         
-printf("$GPGSV,3,1,11,09,76,148,32,05,55,242,29,17,33,054,30,14,27,314,24*71/n");
+printf("$GPGSV,3,1,11,09,76,148,32,05,55,242,29,17,33,054,30,14,27,314,24*71\n");
 fflush(stdout);
 usleep(30000000);   
  }
@@ -24,7 +24,7 @@ printf("Server to receive data from microcontroller");
   while(1){
   printf("Connected to microcontroller...do you want to disconnect? ");
   fflush(stdout);
-  scanf("%c", key);
+  scanf("%c",&key);
   usleep(31000000);
   }
 }
