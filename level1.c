@@ -25,10 +25,12 @@ printf("The distance is %lf kms",value);
 return 0;
 }
 
+//logic to convert from degree to radians
 double deg2rad(double deg){
 return (deg * pi/180);
 }
 
+//logic to convert from radians to degree
 double rad2deg(double rad){
 return (rad * 180/pi);
 }
