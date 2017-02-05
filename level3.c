@@ -9,20 +9,24 @@ void *pseudo_controller(void *vargp)
 printf("hello im pseudo controller\n");
   //run a function every 30 seconds
     while(1)
-    {
-
-         printf("$GPGSV,3,1,11,09,76,148,32,05,55,242,29,17,33,054,30,14,27,314,24*71");
-
+    {         
+printf("$GPGSV,3,1,11,09,76,148,32,05,55,242,29,17,33,054,30,14,27,314,24*71/n");
 fflush(stdout);
 usleep(30000000);   
-
  }
 }
 
 //thread to act as a data server that connects to the microcontroller and receives data from the same
 void *data_server(void *dservp){
+  char key[1];
 printf("Server to receive data from microcontroller");
   //run a function every 31 seconds
+  while(1){
+  printf("Connected to microcontroller...do you want to disconnect? ");  
+  gets(key);
+  fflush(stdout);
+  usleep(31000000);
+  }
 }
 
 int main()
