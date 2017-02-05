@@ -18,13 +18,13 @@ usleep(30000000);
 
 //thread to act as a data server that connects to the microcontroller and receives data from the same
 void *data_server(void *dservp){
-  char key[1];
+  char key;
 printf("Server to receive data from microcontroller");
   //run a function every 31 seconds
   while(1){
-  printf("Connected to microcontroller...do you want to disconnect? ");  
-  gets(key);
+  printf("Connected to microcontroller...do you want to disconnect? ");
   fflush(stdout);
+  scanf("%c", key);
   usleep(31000000);
   }
 }
@@ -35,6 +35,7 @@ pthread_t tid;
 printf("Welcome to message generation system for microcontroller\n");
 //create  a  thread for running the  pseudo controller 
 pthread_create(&tid, NULL, pseudo_controller, NULL);
+pthread_create(&tid, NULL, data_server, NULL);  
 pthread_join(tid, NULL);
 return 0;
 }
