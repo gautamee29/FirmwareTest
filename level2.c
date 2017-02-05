@@ -28,10 +28,10 @@ exit(0);
 //printf("The contents of  file are:\n");
 while((ch=getline(&line, &len, fp)) != -1)
 {
-printf("%s",line);
+//printf("%s",line);
  
 //Logic to check type and value for each line 
-/*   reading = strtok(line, s);
+   reading = strtok(line, s);
    int counter = 0;
    while( reading != NULL ) 
    {           
@@ -97,14 +97,11 @@ printf("%s",line);
                     break;
                 }
                 }
-         //types of input end
+         //types of inputs end
             }
-            //else ends
       reading = strtok(NULL, s);
       counter++;
-
 }
-*/
  //logic to check type and values for each line ends
 }
 fclose(fp);
