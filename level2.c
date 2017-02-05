@@ -1,4 +1,4 @@
-//program to read a file and console log lat, lon, timestamp and velocity on each line
+//Program to read a file and console log lat, lon, timestamp and velocity on each line
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -23,8 +23,6 @@ exit(0);
 while( (ch=getline(&line, &len, fp) ) !=-1)
 {
 printf("%s",line);
-
- 
  
 //logic to check type and value for each line
 const char s[2] = ",";
@@ -73,11 +71,8 @@ char *GPRMC="$GPRMC";
       reading = strtok(NULL, s);
       counter++;
 }
-   //logic to check type and values for each line ends
+ //logic to check type and values for each line ends
  
- 
- 
-
 fclose(fp);
 }
 return 0;
