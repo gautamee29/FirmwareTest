@@ -1,4 +1,4 @@
-//Program to read a file and console log lat, lon, timestamp and velocity on each line
+//Program to read a file and console lat, lon, timestamp and velocity on each line
 #include<stdio.h>
 #include<stdlib.h>
 #include <string.h>
