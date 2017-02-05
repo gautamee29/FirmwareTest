@@ -1,18 +1,22 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<pthread.h>
-
+#include<unistd.h>
 typedef enum { false, true  } bool;
 //thread to act as a microcontroller that generates data every 30 seconds
 void *pseudo_controller(void *vargp)
 {
 printf("hello im pseudo controller\n");
   //run a function every 30 seconds
-    while(true)
+    while(1)
     {
-      sleep(30);
-      printf("$GPGSV,3,1,11,09,76,148,32,05,55,242,29,17,33,054,30,14,27,314,24*71");
-    }
+
+         printf("$GPGSV,3,1,11,09,76,148,32,05,55,242,29,17,33,054,30,14,27,314,24*71");
+
+fflush(stdout);
+usleep(30000000);   
+
+ }
 }
 
 //thread to act as a data server that connects to the microcontroller and receives data from the same
