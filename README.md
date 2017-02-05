@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # starter_hw
 understandng how c programming works with microcontrollers
 Level 1
@@ -14,3 +15,7 @@ Level 3
 hey gautamee, write pseudo code
 command to run level 3
 sudo gcc level3.c -o level 3 -lpthread
+=======
+# FirmwareTest
+Level1, level 2 and level 3 test Deliverables
+>>>>>>> a803a315b1dbbcf1e2f70a4393499d48c0b3f173
