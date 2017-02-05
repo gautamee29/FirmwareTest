@@ -1,11 +1,11 @@
-//programme to find distance between two latitude and longitude
+//Program to find distance between two latitude and longitude
 #include<stdio.h>
 #include<math.h>
 #define pi 3.14
-//declare
+//declaration of functions to be used
 double deg2rad(double deg);
 double rad2deg(double rad);
-
+//first iteration of lat and long predefined
 #define lat1 10.123456
 #define lon1 21.123456
 main()
