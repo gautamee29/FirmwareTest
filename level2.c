@@ -102,8 +102,9 @@ printf("%s",line);
             //else ends
       reading = strtok(NULL, s);
       counter++;
-*/
+
 }
+*/
  //logic to check type and values for each line ends
  
 fclose(fp);
