@@ -106,8 +106,7 @@ printf("%s",line);
 }
 */
  //logic to check type and values for each line ends
- 
-fclose(fp);
 }
+fclose(fp);
 return 0;
 }
