@@ -48,7 +48,7 @@ while((ch=getline(&line, &len, fp)) != -1)
                     case 6:
                     printf(", Longitude is %s, ", reading);
                     break;
-                    case 13:
+                    case 14:
                     printf("Timestamp is %s\n", reading);  
                     break;
                 }
@@ -56,13 +56,13 @@ while((ch=getline(&line, &len, fp)) != -1)
             //type is GPRMC
             else if(strcmp(currenttype, GPRMC) == 0){
                 switch(counter){
-                   case 4:
+                   case 5:
                     printf("latitude is %s, ", reading);
                     break;
-                   case 6:
+                   case 7:
                     printf("longitude is %s, ", reading);
                     break;
-                   case 10:
+                   case 11:
                     printf("Timestamp is %s\n", reading);  
                     break;
                 }
