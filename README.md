@@ -22,15 +22,15 @@ Level1, level 2 and level 3 test Deliverables
 
 Level 1
 Pseudocode
-- Define the value of pi, lat1, lon1.
--Declaration for the function to be used.
--Initialize the value.
--Enter the value of lOn2 and Lat2.
--logic for calculating the distsnce.
+Define the value of pi, lat1, lon1.
+Declaration for the function to be used.
+Initialize the value.
+Enter the value of lOn2 and Lat2.
+Logic for calculating the distsnce.
 Theta= lon1-lon2
-- value=sin(deg2rad(lat)*sin(deg2rad(lat2))+cos(deg2rad(lat1)*cos(deg2rad(lat2))*cos(deg2rad(theta));
--logic to convert deg to rad.
-- logic to convert rad to deg.
+ value=sin(deg2rad(lat)*sin(deg2rad(lat2))+cos(deg2rad(lat1)*cos(deg2rad(lat2))*cos(deg2rad(theta));
+Logic to convert deg to rad.
+Logic to convert rad to deg.
 Stop
 
 
@@ -38,15 +38,15 @@ Stop
 
 Level 2
 Pseudo code
--Initialize the file pointer.
--Declaration for the pointers to be used.
--Open the file.
--Check for the errors while opening the file.
--Check line by line of the file.
--Set the reading counter to 0.
--Check if its GPGGA, GPRMC, GPGSV, GPVTG, GPGSA.
--Check for the lat, lon, timestamp and velocity and accordingly print the values.
--Increment the counter.
-- Close the file.
--Stop
+Initialize the file pointer.
+Declaration for the pointers to be used.
+Open the file.
+Check for the errors while opening the file.
+Check line by line of the file.
+Set the reading counter to 0.
+Check if its GPGGA, GPRMC, GPGSV, GPVTG, GPGSA.
+Check for the lat, lon, timestamp and velocity and accordingly print the values.
+Increment the counter.
+Close the file.
+Stop
 
