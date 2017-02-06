@@ -66,3 +66,16 @@ INITIATE THE MICROCONTROLLER THAT GENERATES DATA EVERY 30SEC
  Executing aftre evry 30sec.
  AInitiate data server to connect and disconnect.
  Executing after every 31 sec
+Flush the buffer if connected.
+Logic to commect and disconnect from microcontroller.
+If true connect 
+Else disconnect
+Process input ends.
+Creating thread for running the pseudomicrocontroller.
+Creating thread for running the pseudo server.
+End
+
+
+Code to run level 3
+Sudo gcc level.c -o level -lpthread
+./level3
