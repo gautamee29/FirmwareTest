@@ -1,8 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include <string.h>
 #include<pthread.h>
 #include<unistd.h>
-#include<unistd.h>
+
 #define TRUE 1
 #define FALSE 0
 #define  BUFFER_SIZE  6000000
