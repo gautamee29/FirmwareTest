@@ -34,18 +34,18 @@ while((ch=getline(&line, &len, fp)) != -1)
    {           
         int equal;
         if(counter == 0){
-         // get the first token 
+         // get the first Reading
             printf("%s, ", reading);
              currenttype =reading;
         }else {
-            // walk through other tokens 
+            // walk through other  Reading
             //type is GPGGA
             if(strcmp(currenttype, GPGGA) == 0){
                 switch(counter){
-                    case 3: 
+                   case 3:
                     printf("Latitude is %s\n", reading);
                     break;
-                    case 1 :
+                    case 5:
                     printf("Longitude is %s, ", reading);
                     break;
                 }
@@ -53,10 +53,10 @@ while((ch=getline(&line, &len, fp)) != -1)
             //type is GPRMC
             else if(strcmp(currenttype, GPRMC) == 0){
                 switch(counter){
-                    case 3:
+                   case 4:
                     printf("latitude is %s\n", reading);
                     break;
-                    case 1:
+                   case 6:
                     printf("longitude is %s, ", reading);
                     break;
                 }
