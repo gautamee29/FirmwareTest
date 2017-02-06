@@ -10,14 +10,14 @@ Enter the value of Lon2 and Lat2.
 Logic to find distance .
 Theta= lon1-lon2
 value=sin(deg2rad(lat)*sin(deg2rad(lat2))+cos(deg2rad(lat1)*cos(deg2rad(lat2))*cos(deg2rad(theta));
-Use Logic to convert deg to rad 
-Logic to convert rad to deg.
+Use Logic to convert degree to radian.
+Logic to convert radian to degree.
 Stop
 ```
 Command to run level1 program
 ```
-sudo gcc level.c -o level -lm
-./level 1
+sudo gcc level1.c -o level -lm
+./level1
 ```
 ##Level 2
 Pseudocode
@@ -30,7 +30,7 @@ Check line by line of the file.
 Set the reading counter to 0.
 Check if type is GPGGA, GPRMC, GPGSV, GPVTG, GPGSA.
 Check for the lat, lon, timestamp and velocity and accordingly print the values.
-Increment the counter.
+Increament the counter.
 Close the file.
 Stop
 ```
@@ -44,7 +44,7 @@ Pseudocode
 ```
 Define the value of true, false, buffer, size.
 Enter the buffer message.
-INITIATE THE MICROCONTROLLER THAT GENERATES DATA EVERY 30SEC
+Initiate the microcontroller that generates the data every 30 sec.
 Executing aftre evry 30sec.
 Initiate data server to connect and disconnect.
 Execute after every 31 sec
@@ -52,10 +52,16 @@ Flush the buffer if connected.
 Connect and disconnect from microcontroller based on input and proceed
 If true connect 
 Else disconnect   
-End
+Stop
 ```
 Code to run level 3
 ```
 sudo gcc level3.c -o level3 -lpthread
 ./level3
 ```
+
+
+
+Initial setup command
+```
+Sudo  apt-get update Sudo apt-get install build-essential
