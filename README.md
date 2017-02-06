@@ -33,7 +33,9 @@ Logic to convert deg to rad.
 Logic to convert rad to deg.
 Stop
 
-
+Code to run level1
+Sudo gcc level.c -o level -lm
+./level 1
 
 
 Level 2
@@ -50,3 +52,17 @@ Increment the counter.
 Close the file.
 Stop
 
+Code to run
+Sudo gcc level3.c -o level2
+./level2
+
+
+
+Level 3
+Pseudo code
+Define the value of true, false, buffer, size.
+Enter the buffer message.
+INITIATE THE MICROCONTROLLER THAT GENERATES DATA EVERY 30SEC
+ Executing aftre evry 30sec.
+ AInitiate data server to connect and disconnect.
+ Executing after every 31 sec
