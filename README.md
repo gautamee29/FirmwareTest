@@ -53,7 +53,9 @@ Connect and disconnect from microcontroller based on input and proceed
 If true connect 
 Else disconnect   
 End
-  ```
-Code to run level 3` ``
+```
+Code to run level 3
+```
 sudo gcc level3.c -o level3 -lpthread
-./level3` ``
+./level3
+```
