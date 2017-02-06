@@ -12,7 +12,7 @@ size_t len = 0;
 const char s[2] = ",";
 char *reading;
 char *currenttype;
-//Type declarations 
+//Type declarations as per types in dump
 char *GPGGA="$GPGGA";
 char *GPRMC="$GPRMC";
 char *GPGSV="$GPGSV";
@@ -42,10 +42,10 @@ while((ch=getline(&line, &len, fp)) != -1)
             //type is GPGGA
             if(strcmp(currenttype, GPGGA) == 0){
                 switch(counter){
-                   case 3:
+                   case 4:
                     printf("Latitude is %s", reading);
                     break;
-                    case 5:
+                    case 6:
                     printf(", Longitude is %s, ", reading);
                     break;
                     case 13:
@@ -67,39 +67,7 @@ while((ch=getline(&line, &len, fp)) != -1)
                     break;
                 }
                 }
-             //type is GPGSV
-            else if(strcmp(currenttype, GPGSV) == 0){
-                switch(counter){
-                    case 3:
-                    printf("latitude is %s\n", reading);
-                    break;
-                    case 1:
-                    printf("longitude is %s, ", reading);
-                    break;
-                }
-                }
-                     //type is GPVTG
-            else if(strcmp(currenttype, GPVTG) == 0){
-                switch(counter){
-                    case 3:
-                    printf("latitude is %s\n", reading);
-                    break;
-                    case 1:
-                    printf("longitude is %s, ", reading);
-                    break;
-                }
-                }
-                     //type is GPGSA
-            else if(strcmp(currenttype, GPGSA) == 0){
-                switch(counter){
-                    case 3:
-                    printf("latitude is %s\n", reading);
-                    break;
-                    case 1:
-                    printf("longitude is %s, ", reading);
-                    break;
-                }
-                }
+             //type is GPGSV, GPVTG and GPGSA do not have lat, lon, timestamp, velocity 
          //types of inputs end
             }
       reading = strtok(NULL, s);
