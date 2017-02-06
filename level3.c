@@ -13,16 +13,15 @@ void *pseudo_controller(void *vargp)
 {
   //run a function every 30 seconds
     while(1)
-    {
+    {   //A predefined message to be generated
         strcat(mc_buffer, "$GPGSV,3,1,11,09,76,148,32,05,55,242,29,17,33,054,30,14,27,314,24*71");         
         usleep(30000000);   
     }
 }
-
 //thread to act as a data server that connects to the microcontroller and receives data from the same
 void *data_server(void *dservp){
 char key;
-  //run a function every 31 seconds
+  //run a function every 31 seconds - as we have only one pseudo microcontroller connected 
   while(1){
    if(connect){
       //We need to flush the buffer if connected
@@ -30,7 +29,7 @@ char key;
         mc_buffer[0] = '\0';
         fflush(stdout);
    }
-printf("Enter key ..C - connect/ D - disconnect\n");
+printf("Press key to proceed... C - connect  D - disconnect\n");
 scanf("%c",&key);
 while((getchar())!='\n');
 fflush(stdout);
