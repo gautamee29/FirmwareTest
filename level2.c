@@ -49,7 +49,7 @@ while((ch=getline(&line, &len, fp)) != -1)
                    case 4:
                     printf(", Longitude is %s, ", reading);
                     break;
-                   case 12:
+                   case 13:
                     printf("Timestamp is %s\n", reading);  
                     break;
                 }
