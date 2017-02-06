@@ -56,8 +56,9 @@ int main()
 {
 pthread_t tid;
 printf("Welcome to message generation system for microcontroller\n");
-//create  a  thread for running the  pseudo controller 
+//create a thread for running the  pseudo microcontroller 
 pthread_create(&tid, NULL, pseudo_controller, NULL);
+//create a thread for running the  pseudo data server   
 pthread_create(&tid, NULL, data_server, NULL);  
 pthread_join(tid, NULL);
 return 0;
