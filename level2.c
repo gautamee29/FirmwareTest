@@ -43,10 +43,13 @@ while((ch=getline(&line, &len, fp)) != -1)
             if(strcmp(currenttype, GPGGA) == 0){
                 switch(counter){
                    case 3:
-                    printf("Latitude is %s\n", reading);
+                    printf("Latitude is %s", reading);
                     break;
                     case 5:
-                    printf("Longitude is %s, ", reading);
+                    printf(", Longitude is %s, ", reading);
+                    break;
+                    case 13:
+                    printf("Timestamp is %s\n", reading);  
                     break;
                 }
             }
@@ -54,10 +57,13 @@ while((ch=getline(&line, &len, fp)) != -1)
             else if(strcmp(currenttype, GPRMC) == 0){
                 switch(counter){
                    case 4:
-                    printf("latitude is %s\n", reading);
+                    printf("latitude is %s, ", reading);
                     break;
                    case 6:
                     printf("longitude is %s, ", reading);
+                    break;
+                   case 10:
+                    printf("Timestamp is %s\n", reading);  
                     break;
                 }
                 }
