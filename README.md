@@ -71,8 +71,4 @@ sudo gcc level3.c -o level3 -lpthread
 ./level3
 ```
 
-
-
-Initial setup command
-```
-Sudo  apt-get update Sudo apt-get install build-essential
+ 
