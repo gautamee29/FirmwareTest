@@ -1,5 +1,12 @@
 
 # FirmwareTest
+ 
+For basic setup, run these commands in the terminal:
+```
+sudo apt-get update
+sudo apt-get install build-essential
+```
+
 ##Level 1
 Pseudocode 
 ```
@@ -16,7 +23,7 @@ Stop
 ```
 Command to run level1 program
 ```
-sudo gcc level1.c -o level -lm
+sudo gcc level1.c -o level1 -lm
 ./level1
 ```
 ##Level 2
