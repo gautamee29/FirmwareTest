@@ -11,11 +11,11 @@ sudo apt-get install build-essential
 Pseudocode 
 ``` 
 Start 
-Define the value of pi, lat1, lon1.
-Declaration for the function to be used.
-Initialize the value.
+Define the value of pi, lat1, lon1(as first iteration should be preset).
+Make Declaration for the function to be used.
+Initialize the values.
 Enter the value of Lon2 and Lat2.
-Logic to find distance .
+execute Logic to find distance .
 Theta= lon1-lon2
 value=sin(deg2rad(lat)*sin(deg2rad(lat2))+cos(deg2rad(lat1)*cos(deg2rad(lat2))*cos(deg2rad(theta));
 Use Logic to convert degree to radian.
