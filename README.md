@@ -9,7 +9,8 @@ sudo apt-get install build-essential
 
 ##Level 1
 Pseudocode 
-```
+``` 
+Start 
 Define the value of pi, lat1, lon1.
 Declaration for the function to be used.
 Initialize the value.
@@ -29,6 +30,7 @@ sudo gcc level1.c -o level1 -lm
 ##Level 2
 Pseudocode
 ```
+Start
 Initialize the file pointer.
 Declaration for the pointers to be used.
 Open the file.
@@ -49,16 +51,18 @@ sudo gcc level2.c -o level2
 ##Level 3
 Pseudocode
 ```
+Start
 Define the value of true, false, buffer, size.
-Enter the buffer message.
-Initiate the microcontroller that generates the data every 30 sec.
-Executing aftre evry 30sec.
+choose the buffer message to be generated(currently hardcoded).
+Initiate the pseudo microcontroller that generates the data every 30 sec.
+Execute after 30 seconds
 Initiate data server to connect and disconnect.
 Execute after every 31 sec
-Flush the buffer if connected.
-Connect and disconnect from microcontroller based on input and proceed
+Flush the buffer(data generated from pseudo microcontroller) if connected to data server else dont flush.
+Take input, Connect and disconnect from microcontroller based on input and proceed
 If true connect 
-Else disconnect   
+Else disconnect 
+Keep  executing the two threads to mock communication
 Stop
 ```
 Code to run level 3
