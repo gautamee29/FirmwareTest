@@ -59,7 +59,9 @@ Execute after 30 seconds
 Initiate data server to connect and disconnect.
 Execute after every 31 sec
 Flush the buffer(data generated from pseudo microcontroller) if connected to data server else dont flush.
-Take input, Connect and disconnect from microcontroller based on input and proceed
+Take input If connected and input C or disconnected and inpurt D then ask to input
+If  input X then proceed with what current connection state is
+Connect and disconnect from microcontroller based on input and proceed
 If true connect 
 Else disconnect 
 Keep  executing the two threads to mock communication
