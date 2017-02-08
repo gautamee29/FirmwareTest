@@ -39,11 +39,11 @@ while((getchar())!='\n');
 fflush(stdout);
  //Logic to connect and disconnect from microcontroller
       if(key == 'C' && connect){
-        printf("already connected, provide 'D' to disconnect");
+        printf("already connected, provide 'D' to disconnect\n");
         }else if (key == 'D' && !connect){
-        printf("already disconnected, provide 'C' to connect or 'X' to skip input and proceed");
+        printf("already disconnected, provide 'C' to connect or 'X' to skip input and proceed\n");
         }else if(key == 'X'){
-        printf("continues with current connection status");
+        printf("continues with current connection status\n");
         break;
         }else if (key == 'C'){
      connect = TRUE;
