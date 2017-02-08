@@ -30,22 +30,35 @@ char key;
         mc_buffer[0] = '\0';
         fflush(stdout);
    }
-printf("Press key to proceed... C - connect  D - disconnect\n");
+    //Take input and validate and 
+    while(1){ 
+printf("Press key to proceed... C - connect  D - disconnect X - proceed with current connection state \n");
 scanf("%c",&key);
 while((getchar())!='\n');
 fflush(stdout);
-//Logic to connect and disconnect from microcontroller
-if(key == 'C'){
+ //Logic to connect and disconnect from microcontroller
+      if(key == 'C' && connect){
+        printf("already connected, provide 'D' to disconnect");
+        }else if (key == 'D' && !connect){
+        printf("already disconnected, provide 'C' to connect or 'X' to skip input and proceed");
+        }else if(key == 'X'){
+        printf("continues with current connection status");
+        break;
+        }else if (key == 'C'){
      connect = TRUE;
      printf("connected...\n");
      fflush(stdout);
+     break;
   }else if(key == 'D'){
     connect = FALSE;
     printf("Disconnected...\n");
     fflush(stdout); 
+    break;
  }else{
-    printf("Invalid input...\n");
+    printf("Invalid input... try again\n");
 }
+      }
+    //Validate input ends
 printf("waiting for data to be generated every 30 seconds...\n");
 //logic to process input ends
  usleep(31000000);
