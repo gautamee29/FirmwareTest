@@ -33,7 +33,8 @@ char key;
     //Take input and validate and 
     while(1){ 
 printf("Press key to proceed... C - connect  D - disconnect X - proceed with current connection state \n");
-scanf("%c",&key);
+      fflush(stdout);
+      scanf("%c",&key);
 while((getchar())!='\n');
 fflush(stdout);
  //Logic to connect and disconnect from microcontroller
